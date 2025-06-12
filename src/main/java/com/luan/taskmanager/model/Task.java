@@ -1,62 +1,60 @@
 package com.luan.taskmanager.model;
 
-import jakarta.persistence.Entity; // Importa a anotação Entity do Jakarta Persistence
-import jakarta.persistence.Id; // Importa a anotação Id do Jakarta Persistence
-import jakarta.persistence.GeneratedValue; // Importa a anotação GeneratedValue do Jakarta Persistence
-import jakarta.persistence.GenerationType; // Importa a anotação GenerationType do Jakarta Persistence
+import jakarta.persistence.Entity; 
+import jakarta.persistence.Id; 
+import jakarta.persistence.GeneratedValue; 
+import jakarta.persistence.GenerationType; 
 
-@Entity // Anotação que indica que esta classe é uma entidade JPA
+@Entity 
 public class Task {
 
-    @Id // Anotação que indica que este campo é a chave primária da entidade
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Anotação que indica que o valor da chave primária será gerado
-                                                        // automaticamente pelo banco de dados
-    private Long id; // Campo que representa o ID da tarefa, do tipo Long
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private String title; // Campo que representa o título da tarefa, do tipo String
-    private String description; // Campo que representa a descrição da tarefa, do tipo String
-    private boolean completed; // Campo que indica se a tarefa está concluída, do tipo boolean
+    private String title;
+    private String description;
+    private boolean completed;
 
     public Task() {
-        // Construtor padrão necessário para o JPA
     }
 
     public Task(String title, String description) {
         this.title = title;
         this.description = description;
-        this.completed = false; // Inicializa completed como false por padrão
+        this.completed = false; 
     }
 
     public Long getId() {
-        return id; // Retorna o ID da tarefa
+        return id; 
     }
 
     public void setId(Long id) {
-        this.id = id; // Define o ID da tarefa
+        this.id = id;
     }
 
     public String getTitle() {
-        return title; // Retorna o título da tarefa
+        return title;
     }
 
     public void setTitle(String title) {
-        this.title = title; // Define o título da tarefa
+        this.title = title;
     }
 
     public String getDescription() {
-        return description; // Retorna a descrição da tarefa
+        return description;
     }
 
     public void setDescription(String description) {
-        this.description = description; // Define a descrição da tarefa
+        this.description = description;
     }
 
     public boolean isCompleted() {
-        return completed; // Retorna se a tarefa está concluída
+        return completed;
     }
 
     public void setCompleted(boolean completed) {
-        this.completed = completed; // Define se a tarefa está concluída
+        this.completed = completed;
     }
 
 public Task(String title, String description, boolean completed) {
