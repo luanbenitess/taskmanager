@@ -39,8 +39,11 @@ No arquivo `src/main/resources/application.properties` está configurada a conex
 
 Exemplo:
 spring.datasource.url=jdbc:postgresql://localhost:5432/taskmanager
+
 spring.datasource.username=seu_usuario
+
 spring.datasource.password=sua_senha
+
 spring.jpa.hibernate.ddl-auto=update
 
 ---
